@@ -15,7 +15,7 @@ class ParagraphDivider:
         """Setup OpenAI client with API key"""
         api_key = None
         try:
-            api_key = st.secrets["OPENAI_API_KEY"]
+            api_key = st.secrets["openai"]["api_key"]
         except (KeyError, FileNotFoundError):
             api_key = os.getenv("OPENAI_API_KEY")
         
